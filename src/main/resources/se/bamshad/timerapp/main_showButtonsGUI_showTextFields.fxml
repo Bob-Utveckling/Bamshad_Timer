@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" -->
+<!--<Pane fx:controller="se.bamshad.timerapp.Controller_Buttons" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="600.0" style="-fx-border-radius: 25px; -fx-background-radius: 25px; -fx-border-width: 2px; -fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">-->
+
+<Pane prefHeight="324.0" prefWidth="586.0" style="-fx-border-radius: 25px; -fx-background-radius: 25px; -fx-border-width: 2px; -fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.bamshad.timerapp.Controller_Buttons_TextFields_And_TheThread">
+<!--<Pane fx:controller="se.bamshad.timerapp.Controller" style="-fx-border-radius: 25px; -fx-background-radius: 25px; -fx-border-width: 2px; -fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">-->
+<!--<Pane style="-fx-border-radius: 25px; -fx-background-radius: 25px; -fx-border-width: 2px; -fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">-->
+    <children>
+
+        <TextField fx:id="dateField" layoutX="24.0" layoutY="5.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+        <TextArea fx:id="notesField" layoutX="13.0" layoutY="37.0" prefHeight="78.0" prefWidth="557.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextArea>
+
+        <TextField fx:id="daysField" layoutX="52.0" layoutY="168.0" prefHeight="26.0" prefWidth="40.0" scaleX="3.0" scaleY="3.0" text="-" />
+        <TextField fx:id="hoursField" layoutX="177.0" layoutY="168.0" prefHeight="26.0" prefWidth="28.0" scaleX="3.0" scaleY="3.0" text="-" />
+        <TextField fx:id="minutesField" layoutX="275.0" layoutY="168.0" prefHeight="26.0" prefWidth="28.0" scaleX="3.0" scaleY="3.0" text="-" />
+        <TextField fx:id="secondsField" layoutX="373.0" layoutY="168.0" prefHeight="26.0" prefWidth="28.0" scaleX="3.0" scaleY="3.0" text="0" />
+        <TextField fx:id="myMillisField" layoutX="486.0" layoutY="168.0" prefHeight="26.0" prefWidth="41.0" scaleX="3.0" scaleY="3.0" text="-" />
+
+
+        <Text layoutX="54.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="روز ddd" />
+        <Text layoutX="162.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ساعت hh" />
+        <Text layoutX="260.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="دقیقه mm" />
+        <Text layoutX="370.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ثانیه ss" />
+        <Text layoutX="466.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="milli" />
+
+        <Text layoutX="138.0" layoutY="197.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+        <Text layoutX="238.0" layoutY="195.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+        <Text layoutX="334.0" layoutY="195.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+        <Text layoutX="436.0" layoutY="195.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+
+
+
+        <Button fx:id="startButton" layoutX="353.0" layoutY="223.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="51.0" prefWidth="52.0" text="Start" />
+        <Button fx:id="pauseButton" layoutX="408.0" layoutY="223.0" mnemonicParsing="false" onAction="#onPauseButtonClick" prefHeight="51.0" prefWidth="47.0" text="Pause" />
+        <Button layoutX="458.0" layoutY="223.0" mnemonicParsing="false" onAction="#onResetButtonClick" prefHeight="51.0" prefWidth="45.0" text="Reset" />
+        <Button layoutX="512.0" layoutY="223.0" mnemonicParsing="false" onAction="#onCopyButtonClick" prefHeight="51.0" prefWidth="52.0" text="Copy" />
+
+
+        <ImageView fitHeight="89.0" fitWidth="84.0" layoutX="14.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@roses2.jpg" />
+            </image>
+        </ImageView>
+        <Label fx:id="statusMessages" layoutX="102.0" layoutY="263.0" prefHeight="17.0" prefWidth="239.0" text="-" />
+        <Label fx:id="timeNotes" layoutX="102.0" layoutY="280.0" prefHeight="17.0" prefWidth="470.0" text="To have the timer start from a preset time, make the change while the timer is stopped." />
+        <ImageView fx:id="statusImageView" fitHeight="38.0" fitWidth="45.0" layoutX="102.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@ready.png" />
+            </image>
+        </ImageView>
+
+        <Button fx:id="quit" layoutX="508.0" layoutY="5.0" mnemonicParsing="false" onAction="#onQuitButtonClick" prefHeight="25.0" prefWidth="61.0" text="Quit" />
+      <Label fx:id="timeNotes1" layoutX="102.0" layoutY="296.0" prefHeight="17.0" prefWidth="470.0" text="Enterred Hours, Minutes, and Seconds higher than standard clock time not effective." />
+
+    </children>
+</Pane>
