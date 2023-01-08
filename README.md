@@ -9,5 +9,9 @@ The timer is flexible and allows for personal time updates while the timer runs.
 An example video of the app can be found at:
 https://bamshadit.se/static/Bamshad_Timer_App.mp4
 (If you get a MIME Type error on the video, please retype the link in your browser or try an 'enter' press at the link :)
+https://user-images.githubusercontent.com/42844572/211208669-00a591bf-7553-4361-936f-304919a50ed4.mp4
 
 Please drop me a note if interested. The app uses JavaFX Packager for JDK 18.
+
+
+
