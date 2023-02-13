@@ -15,4 +15,5 @@ Alternatively at: https://bamshadit.se/static/Bamshad_Timer_App.mp4
 Please drop me a note if interested. The app uses JavaFX Packager for JDK 18.
 
 
+![Bamshad Timer](https://user-images.githubusercontent.com/42844572/218413784-1a62e50f-758f-412a-aeef-a701c134eae7.png)
 
